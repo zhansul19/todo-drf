@@ -81,8 +81,8 @@ DATABASES = {
         'NAME': 'todo',
         'USER': 'root',
         'PASSWORD': 'password',
-        'HOST': 'localhost',  # or your database host
-        'PORT': '5434',  # or your database port
+        'HOST': 'db',  # or your database host
+        'PORT': '5432',  # or your database port
     }
 }
 

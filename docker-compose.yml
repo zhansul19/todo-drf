@@ -9,12 +9,14 @@ services:
       POSTGRES_DB: todo
       POSTGRES_USER: root
       POSTGRES_PASSWORD: password
+    ports:
+      - "5432:5432"
 
   web:
     build: .
-    command: python manage.py runserver 0.0.0.0:8000
+    command: python todo_drf/manage.py runserver 0.0.0.0:8000
     volumes:
-      - .:/app
+      - .:/code
     ports:
       - "8000:8000"
     depends_on:
